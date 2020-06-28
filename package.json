@@ -1,0 +1,21 @@
+{
+  "name": "website-cf-template",
+  "version": "1.0.0-rc.0",
+  "description": "This is a CloudFormation template that allows you to quickly create a stack in AWS with the basic resources for a S3-backed website.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colbywhite/website-cf-template.git"
+  },
+  "author": "Colby M. White",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colbywhite/website-cf-template/issues"
+  },
+  "homepage": "https://github.com/colbywhite/website-cf-template#readme",
+  "devDependencies": {
+    "aws-cf-monitor": "2.1.0",
+    "aws-sdk": "2.706.0",
+    "chalk": "2.4.2",
+    "winston": "3.3.3"
+  }
+}
