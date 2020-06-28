@@ -61,15 +61,18 @@ Resources:
       DistributionConfig:
         Enabled: true
         Aliases:
-          - Fn::Join:
-              - '.'
-              - - Ref: DomainName
-                - Ref: TopLevelDomain
-          - Fn::Join:
-              - '.'
-              - - www
-                - Ref: DomainName
-                - Ref: TopLevelDomain
+          Fn::If:
+            - SSLDisabled
+            - Ref: 'AWS::NoValue'
+            - - Fn::Join:
+                - '.'
+                - - Ref: DomainName
+                  - Ref: TopLevelDomain
+              - Fn::Join:
+                - '.'
+                - - www
+                  - Ref: DomainName
+                  - Ref: TopLevelDomain
         DefaultRootObject: /index.html
         Logging:
           Bucket:
